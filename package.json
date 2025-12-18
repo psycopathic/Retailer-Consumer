@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate:types":"payload generate:types"
+    "types": "NODE_OPTIONS=\"--import tsx\" payload generate:types",
+    "db:fresh": "NODE_OPTIONS=\"--import tsx\" payload migrate:fresh",
+    "db:status": "NODE_OPTIONS=\"--import tsx\" payload migrate:status",
+    "db:migrate": "NODE_OPTIONS=\"--import tsx\" payload migrate",
+    "db:reset": "NODE_OPTIONS=\"--import tsx\" payload migrate:reset"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -112,6 +112,87 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Neobrutalism Theme */
+.theme-neobrutalism {
+  --radius: 0.375rem;
+  --background: #fffbef; /* soft warm background */
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #111111; /* black primary */
+  --primary-foreground: #ffffff;
+  --secondary: #ffe082; /* yellow */
+  --secondary-foreground: #111111;
+  --muted: #f2f2f2;
+  --muted-foreground: #333333;
+  --accent: #a0e7e5; /* teal */
+  --accent-foreground: #111111;
+  --destructive: #ff5252;
+  --border: #111111; /* bold borders */
+  --input: #eaeaea;
+  --ring: #111111; /* strong focus ring */
+  --chart-1: #ff8a80;
+  --chart-2: #80d8ff;
+  --chart-3: #ffd180;
+  --chart-4: #ccff90;
+  --chart-5: #b388ff;
+  --sidebar: #fff7db;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #111111;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ffd54f;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: #111111;
+  --sidebar-ring: #111111;
+}
+
+.dark.theme-neobrutalism {
+  --background: #121212;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #111111;
+  --secondary: #333333;
+  --secondary-foreground: #ffffff;
+  --muted: #222222;
+  --muted-foreground: #bbbbbb;
+  --accent: #64ffda;
+  --accent-foreground: #111111;
+  --destructive: #ff8a80;
+  --border: #ffffff;
+  --input: #2c2c2c;
+  --ring: #ffffff;
+}
+
+/* Neobrutalism utilities */
+.nb-shadow {
+  box-shadow: 6px 6px 0 0 var(--border);
+}
+.nb-shadow-sm {
+  box-shadow: 3px 3px 0 0 var(--border);
+}
+.nb-shadow-lg {
+  box-shadow: 10px 10px 0 0 var(--border);
+}
+.nb-raise {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.nb-raise:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 0 var(--border);
+}
+
+/* Optional: give all focus-visible a thicker outline for neobrutalism */
+.theme-neobrutalism :is(button, a, input, textarea, select):focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
