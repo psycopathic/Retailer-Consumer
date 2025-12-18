@@ -25,7 +25,7 @@ const NavbarItems = ({ href, children, isActive }: NavbarItemProps) => {
       asChild
       variant="ghost"
       className={cn(
-        "rounded-[10px] px-3.5 text-lg",
+        "rounded-[10px] px-3.5 text-lg hover:bg-pink-500",
         isActive && "bg-black text-white hover:bg-black hover:text-white"
       )}
     >
@@ -50,7 +50,7 @@ const Navbar = () => {
         <Link href="/" className="pl-6 flex items-center">
           <span
             className={cn(
-              "text-5xl font-semibold hover:underline font-playwrite-nz"
+              "text-5xl font-semibold hover:underline hover:text-pink-500 font-playwrite-nz"
             )}
           >
             RE-CON
